@@ -1,16 +1,18 @@
 import React from "react";
 
+// importing image locally with react
 import mealsImage from '../../assets/header.png'
+import classes from './Header.module.css'
 
 const Header = props => {
     return (
         <>
-            <header>
-                <h1>CJFOODS</h1>
-                <button>Cart</button>
+            <header className={classes.header}>
+                <h1>.</h1>
+                <button className={classes.button}>Cart</button>
             </header>
-            <div>
-                <img src={mealsImage} />
+            <div className={classes['main-image']}>
+                <img src={mealsImage} alt="CJfoods banner with fish and white rice" />
             </div>
         </>
     )

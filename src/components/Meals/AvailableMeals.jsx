@@ -31,6 +31,16 @@ const DUMMY_MEALS = [
   },
 ];
 
-const AvailableMeals = () => {};
+const AvailableMeals = () => {
+    const mealsList = DUMMY_MEALS.map();
+
+    return (
+        <section>
+            <ul>
+               {mealsList} 
+            </ul>
+        </section>
+    )
+};
 
 export default AvailableMeals;

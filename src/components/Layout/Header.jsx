@@ -1,4 +1,5 @@
 import React from "react";
+import HeaderCartButton from "./HeaderCartButton";
 
 // importing image locally with react
 import mealsImage from '../../assets/header.png'
@@ -9,7 +10,7 @@ const Header = props => {
         <>
             <header className={classes.header}>
                 <h1>.</h1>
-                <button className={classes.button}>Cart</button>
+                <HeaderCartButton />
             </header>
             <div className={classes['main-image']}>
                 <img src={mealsImage} alt="CJfoods banner with fish and white rice" />

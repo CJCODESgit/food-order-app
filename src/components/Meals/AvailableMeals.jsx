@@ -6,7 +6,7 @@ const DUMMY_MEALS = [
   {
     id: 'm1',
     name: 'White Rice and stew',
-    description: 'whole grained rice and delicious stew made from carefully picked tomatoes',
+    description: 'whole grained rice and delicious stew',
     price: 22.99,
   },
   {
@@ -30,7 +30,7 @@ const DUMMY_MEALS = [
   {
      id: 'm5',
     name: 'Egusi Soup and pounded yam',
-    description: 'delicious egusi soup. one owambe mummy said i should add it too',
+    description: 'delicious egusi soup.',
     price: 18.99,
   },
 ];

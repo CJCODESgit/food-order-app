@@ -5,7 +5,7 @@ const Cart = (props) => {
   const cartItems = <ul className={classes['cart-items']}> {[{id: 'c1', name: 'Afang', amount: 2, price: 30.55 }].map((item) => <li>{item.name}</li>)} </ul>
 
   return (
-    <Modal>
+    <Modal onClose={props.onClose}>
       {cartItems}
       <div className={classes.total}>
         <span>Total Amount</span>

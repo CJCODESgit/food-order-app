@@ -17,8 +17,8 @@ function App() {
 
   return (
     <>
-      <Cart />
-      <Header />
+     {cartIsShown && <Cart />}
+      <Header onShowCart={showCartHandler} />
       <main>
         <Meals />
       </main>

@@ -7,7 +7,7 @@ import classes from './HeaderCartButton.module.css';
 const HeaderCartButton = props => {
    const cartCtx = useContext(CartContext);
 
-   const numberOf
+   const numberOfCartItems = cartCtx.items.length;
 
     return (
         <button className={classes.button} onClick={props.onClick}>

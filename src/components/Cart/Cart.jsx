@@ -8,6 +8,8 @@ const Cart = (props) => {
 
   const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`;
 
+  const hasItems = cartCtx.items.length > 0;
+
   const cartItems =( 
     <ul 
       className={classes['cart-items']}> 
@@ -25,7 +27,7 @@ const Cart = (props) => {
       </div>
       <div className={classes.actions}>
         <button className={classes['button--alt']}     onClick={props.onClose} >Close</button>
-        <button className={classes.button}>Order</button>
+       {hasItems && <button className={classes.button}>Order</button>}
       </div>
     </Modal>
   )

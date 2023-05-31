@@ -15,18 +15,20 @@ const cartReducer = (state, action) => {
     const existingCartItemIndex = state.items.findIndex(item => item.id === action.item.id);
 
     const existingCartItem = state.items[existingCartItemIndex];
-
-    let updatedItem;
+//note there's a difference between both variables one is singular and one is plural
+    
     let updatedItems;
 
     if (existingCartItem) {
-      updatedItem = {
+      const updatedItem = {
         ...existingCartItem,
         amount: existingCartItem.amount + action.item.amount
-      }
+      };
+      updatedItems = [...state.items];
+      updatedItems[existingCartItemIndex] = updatedItem;
+    } else{
+      updatedItems = state.items.concat(action.item);
     }
-
-    const updatedItems = state.items.concat(action.item);
     
     return {
       items: updatedItems,
